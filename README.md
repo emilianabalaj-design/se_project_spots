@@ -38,4 +38,4 @@ This project is a responsive page with a profile and a gallery of photo cards. I
 
 ### Pitch Video 
 
-  https://drive.google.com/file/d/112DIfOiea6Q3TziU68XG2VfBT5xidlZJ/view?usp=sharing
+[  https://drive.google.com/file/d/112DIfOiea6Q3TziU68XG2VfBT5xidlZJ/view?usp=sharing](https://www.loom.com/share/190cf827de8747ab99fb91c6c130f40c)
