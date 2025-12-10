@@ -17,7 +17,7 @@ margin-top: 40px;
     font-size: 16px;
 }
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
     .footer {
         padding: 20px 24px;
     }
@@ -27,7 +27,7 @@ margin-top: 40px;
     }
 }
 
-@media screen and (max-width: 627) {
+@media screen and (max-width: 627px) {
     .footer{
         padding: 16px;
         margin-top: 32px;
