@@ -101,7 +101,7 @@
 
 
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
     .profile {
         gap: 20px;
     }
@@ -157,6 +157,5 @@
         margin: 0 20px;
     }
 }
-
 
 
