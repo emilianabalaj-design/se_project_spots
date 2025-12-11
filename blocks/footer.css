@@ -9,30 +9,30 @@ box-sizing: border-box;
 border-top: 1px solid rgba(33, 33, 33,0.4);
 margin-top: 40px;
 }
-
+ 
 .footer__text {
     margin: 0;
     color: rgba(33, 33, 33, 0.7);
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
-
-@media screen and (max-width: 1024) {
+ 
+@media screen and (max-width: 1024px) {
     .footer {
         padding: 20px 24px;
     }
-
+ 
     .footer__text {
         font-size: 13px;
     }
 }
-
-@media screen and (max-width: 627) {
+ 
+@media screen and (max-width: 627px) {
     .footer{
         padding: 16px;
         margin-top: 32px;
     }
-
+ 
     .footer__text {
         font-size: 12px;
     }

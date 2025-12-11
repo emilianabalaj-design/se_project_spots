@@ -3,32 +3,32 @@ background-color: #FCF5E5;
 font-family: "Poppins", Arial, Helvetica, sans-serif;
 min-height: 100vh;
 }
-
+ 
 .page__section {
     max-width: 1280px;
     margin: 0 auto;
 }
-
-
+ 
+ 
 @media screen and (max-width: 1024px) {
     .page {
         max-width: 1024px;
     }
-
+ 
     .page__section {
         padding: 0 24px 40px;
     }
-
+ 
    .page__main {
     padding: 0 20px;
    }
 }
-
+ 
 @media screen and (max-width:627px) {
     .page {
         max-width: 627px;
     }
-
+ 
     .page__section {
         padding: 0 16px 32px;
     }
