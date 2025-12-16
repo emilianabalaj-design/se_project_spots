@@ -52,6 +52,9 @@
     background-color: transparent;
 }
 
+.modal__close-btn:hover {
+    opacity: 1;
+}
 
 
 .modal__title {
@@ -107,7 +110,7 @@
 }
 
 .modal__submit-btn:hover {
-    background-color: #333333;
+    opacity: 0.8;
 }
 
  
