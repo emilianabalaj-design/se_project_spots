@@ -33,7 +33,7 @@ const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 
 const editProfileFormEl = editProfileModal.querySelector(".modal__form");
 
-const editProfilenameInput = editProfileModal.querySelector("#profile-name-input");
+const editProfileNameInput = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescriptionInput = editProfileModal.querySelector("#profile-description-input");
 
 
@@ -44,8 +44,8 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 const newPostFormEl = newPostModal.querySelector(".modal__form");
 
-const newPostNameInput = newPostModal.querySelector("#new-post-name-input");
-const newPostLinkInput = newPostModal.querySelector("#new-post-link-input");
+const newPostNameInput = newPostModal.querySelector("#card-caption-input");
+const newPostLinkInput = newPostModal.querySelector("#card-image-input");
 
 
 const profileNameEl = document.querySelector(".profile__name");
