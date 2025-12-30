@@ -1,5 +1,6 @@
 .card {
     width: 413px;
+    position: relative;
 }
  
  
@@ -32,18 +33,48 @@ text-overflow: ellipsis;
 white-space: nowrap;
 }
  
- 
+.card__delete-button {  
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 10px;
+   left: 371px;
+}
+
+.card__delete-button:hover {
+    opacity: 0.6;
+}
+    
+
 .card__like-button {
     background-image: url(../images/like-icon.svg);
     width: 23px;
     height: 20px;
     border: none;
+    padding: 0;
+    margin: 0;
     background-color: transparent;
-    opacity: 40%;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    cursor: pointer;
 }
- 
+
+    
 .card__like-button:hover {
     opacity: 1;
+}
+
+
+.card__like-button_liked {
+    background-image: url(../images/red-like-icon.svg);
+    opacity: 1;
+}
+
+.card__like-button_liked:hover {
+    opacity: 0.4;
 }
  
  
