@@ -84,7 +84,7 @@ function getCardElement(data) {
 
     const cardLikeButton = cardElement.querySelector(".card__like-button");
     cardLikeButton.addEventListener("click", function () {
-        cardLikeButton.classList.toggle("card__like-button_liked");
+        cardLikeButton.classList.toggle("card__like-button_l");
     });
 
         const cardDeleteButton = cardElement.querySelector(".card__delete-button");
@@ -147,13 +147,22 @@ editProfileFormEl.addEventListener("submit", function (event) {
 newPostFormEl.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const name = newPostNameInput.value.trim();
+    const link = newPostLinkInput.value.trim();
+
+    if (name === "" || link === "") {
+        return;
+    }
+
     const inputValues = {
-        name: newPostNameInput.value,
-        link: newPostLinkInput.value,
+        name: name,
+        link: link,
     };
     
     const cardElement = getCardElement(inputValues);
     cardsList.prepend(cardElement);
+
+    newPostFormEl.reset();
 
     closeModal(newPostModal);
  
