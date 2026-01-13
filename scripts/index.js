@@ -84,12 +84,12 @@ function getCardElement(data) {
 
     const cardLikeButton = cardElement.querySelector(".card__like-button");
     cardLikeButton.addEventListener("click", function () {
-        cardLikeButton.classList.toggle("card__like-button_l");
+        cardLikeButton.classList.toggle("card__like-button_liked");
     });
 
         const cardDeleteButton = cardElement.querySelector(".card__delete-button");
         cardDeleteButton.addEventListener("click", function () {
-            cardDeleteButton.closest(".card").remove();
+            cardElement.remove();
         });
 
 

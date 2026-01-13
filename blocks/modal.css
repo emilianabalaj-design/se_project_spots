@@ -51,21 +51,27 @@
     cursor: pointer;
     opacity: 0.4;
     display: flex;
+
+    background-image: url(../images/close-icon.svg);
     align-items:  center;
     justify-content: center;
     background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
 }
 
+
 .modal__close-btn_type_preview {
-    /* Set up preview close buttons hover state */
     top: 0;
     right: -52.5px;
 }
 
+
 .modal__close-btn_type_preview:hover {
     opacity: 1;
 }
-
 
 
 .modal__close-btn:hover {
