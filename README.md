@@ -1,41 +1,33 @@
-# Project 3: Spots
+# Project: Spots
 
-This project is a responsive page with a profile and a gallery of photo cards. I followed the Figma layout and adjusted the design for desktop, tablet and mobile.
-  
-## Features 
-* Profile section with avatar, name and buttons.
-* Grid of card with images and short caption
-* Media queries (tablet and mobile)
-* GitHub Pages
-  
+This project is a responsive web application that allows users to manage a profile and interact with photo cards.  
+In Sprint 7, the focus was on improving **form validation** and **modal user experience** to make the app more reliable and user-friendly.
 
-  ## Tools
-  * HTML
-  * CSS
-  * Flexxbox & Grid
-  * MEdia queries
-  * GitHub Oage
-  
-## What I learned
-* How to write media queries correctly
-* How to deploy a project with GitHub Pages
+## Features
+- Profile edit form with real-time validation
+- New card form with URL and character length validation
+- Error messages displayed for invalid inputs
+- Submit buttons enabled/disabled based on form validity
+- Forms reset correctly after successful submission
+- Modals can be closed by clicking the overlay
+- Modals can be closed using the Escape (Esc) key
+- Responsive layout for desktop, tablet, and mobile
 
-## Live Link 
-  
-* https://emilianabalaj-design.github.io/se_project_spots/
+## Tools & Technologies
+- HTML
+- CSS (Flexbox & Grid)
+- JavaScript (ES6)
+- Browser form validation API
+- Git & GitHub Pages
 
-  
-## Images   
+## What I Learned
+- How to implement reusable form validation logic
+- How to manage validation state across multiple forms
+- How to improve UX by handling modal behavior correctly
+- How to use configuration objects to avoid hard-coded values
+- How to safely add and remove event listeners
 
-### Desktop 
-![Desktop view](./images/Desktop.png)
+## Project Pitch Video
+Watch the project pitch video here:  
 
-### Tablet
-![Tablet view](./images/Tablet%20view.png)
-
-### Mobile 
-![Mobile view](./images/Mobile%20view.png)
-
-### Pitch Video 
-
-[  https://drive.google.com/file/d/112DIfOiea6Q3TziU68XG2VfBT5xidlZJ/view?usp=sharing](https://www.loom.com/share/190cf827de8747ab99fb91c6c130f40c)
+- (https://www.loom.com/share/daa97ecd1cba4802838520152fac129f)
