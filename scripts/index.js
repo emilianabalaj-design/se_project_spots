@@ -1,3 +1,5 @@
+
+
 const initialCards = [
     {
         name: "Golden Gate Bridge",
@@ -16,7 +18,7 @@ const initialCards = [
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
     },
     {
-        name: "A very long bridge, over the forest and through the trees",
+        name: "A very long bridge over the forest",
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
     },
     {
@@ -28,6 +30,16 @@ const initialCards = [
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
     }
 ];
+
+
+const settings = {
+    formSelector: ".modal__form",
+    inputSelector: ".modal__input",
+    submitButtonSelector: ".modal__submit-btn",
+    inactiveButtonClass:".modal__submit-btn_disabled",
+};
+
+enableValidation(settings);
 
 
 const editProfileButton = document.querySelector(".profile__edit-button");
@@ -58,6 +70,7 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 
 const previewModalEl = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModalEl.querySelector(".modal__close-btn");
+const submitButtonNewPost = newPostModal.querySelector(".modal__submit-btn");
 const previewImageEl = previewModalEl.querySelector(".modal__image-preview");
 const previewCaptionEl = previewModalEl.querySelector(".modal__caption");
 
@@ -106,6 +119,7 @@ function getCardElement(data) {
 
 
 function openModal (modal) {
+
     modal.classList.add("modal_is-opened");
 }
 
@@ -113,17 +127,36 @@ function closeModal (modal) {
     modal.classList.remove("modal_is-opened");
 }
 
+function handleEscClose(event) {
+    if (event.key === "Escape") {
+        const openedModal = document.querySelector(".modal_is-opened");
+        if (openedModal) {
+            closeModal(openedModal);
+        }
+    }
+}
+
+function openModal(modal) {
+    modal.classList.add("modal_is-opened");
+    document.addEventListener("keydown", handleEscClose);
+}
+
+
+function closeModal(modal) {
+    modal.classList.remove("modal_is-opened");
+    document.removeEventListener("keydown", handleEscClose);
+}
 
 editProfileButton.addEventListener("click", function () {
  openModal(editProfileModal);
-
-
+resetValidation(editProfileFormEl, [editProfileNameInput, editProfileDescriptionInput]);
     editProfileNameInput.value = profileNameEl.textContent;
     editProfileDescriptionInput.value = profileDescriptionEl.textContent;
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
     closeModal(editProfileModal);
+    resetValidation(editProfileFormEl, [editProfileNameInput, editProfileDescriptionInput]);
 });
 
 
@@ -135,6 +168,11 @@ addPostButton.addEventListener("click", function () {
 newPostCloseBtn.addEventListener("click", function () {
     closeModal(newPostModal);
 });
+
+
+
+
+
 
 editProfileFormEl.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -163,7 +201,7 @@ newPostFormEl.addEventListener("submit", function (event) {
     cardsList.prepend(cardElement);
 
     newPostFormEl.reset();
-
+    disableSubmitButton(submitButtonNewPost, settings);
     closeModal(newPostModal);
  
 });
