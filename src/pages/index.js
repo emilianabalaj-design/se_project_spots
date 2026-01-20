@@ -1,5 +1,5 @@
-import "./index.css";
-import { enableValidation } from "../scripts/validate.js"
+import { enableValidation, resetValidation, settings } from "./validation.js";
+
 
 const initialCards = [
     {
@@ -32,13 +32,6 @@ const initialCards = [
     }
 ];
 
-
-const settings = {
-    formSelector: ".modal__form",
-    inputSelector: ".modal__input",
-    submitButtonSelector: ".modal__submit-btn",
-    inactiveButtonClass:".modal__submit-btn_disabled",
-};
 
 enableValidation(settings);
 
@@ -161,10 +154,6 @@ newPostCloseBtn.addEventListener("click", function () {
 });
 
 
-
-
-
-
 editProfileFormEl.addEventListener("submit", function (event) {
     event.preventDefault();
     profileNameEl.textContent = editProfileNameInput.value;
@@ -202,3 +191,4 @@ initialCards.forEach(function (item) {
     const cardElement = getCardElement(item);
     cardsList.append(cardElement);
 });
+
