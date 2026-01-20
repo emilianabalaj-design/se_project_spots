@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/pages/index.js
 import { enableValidation, resetValidation, settings } from "./validation.js";
+=======
+import { enableValidation, resetValidation, settings } from "./validate.js";
+>>>>>>> 54f206b (Fix validation paths and restore cards rendering):scripts/index.js
 
 
 const initialCards = [
@@ -190,5 +194,9 @@ newPostFormEl.addEventListener("submit", function (event) {
 initialCards.forEach(function (item) {
     const cardElement = getCardElement(item);
     cardsList.append(cardElement);
+<<<<<<< HEAD:src/pages/index.js
 });
 
+=======
+});
+>>>>>>> 54f206b (Fix validation paths and restore cards rendering):scripts/index.js

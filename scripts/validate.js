@@ -94,4 +94,7 @@ setEventListeners(formEl, config);
 };
 
 export { enableValidation, resetValidation, settings };
+<<<<<<< HEAD:src/scripts/validate.js
 
+=======
+>>>>>>> 54f206b (Fix validation paths and restore cards rendering):scripts/validate.js
