@@ -7,20 +7,19 @@
     <meta name="description" content="Responsive image gallery" />
     <meta name="author" content="Emiliana Balaj" />
     <meta name="keywords" content="spots, gallery, image, travel" />
-    <link rel="stylesheet" href="pages/index.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img src="<%= require('./images/logo.svg') %>" alt="Spot logo" class="header__logo" />
       </header>
 
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/avatar.jpg"
+            src="<%= require('./images/avatar.jpg') %>"
             alt="Avatar Profile"
             class="profile__avatar"
           />
@@ -28,12 +27,12 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
-              <img src="./images/pencil.svg" alt="Pencil Icon" /> Edit Profile
+              <img src="<%= require('./images/pencil.svg') %>" alt="Pencil Icon" /> Edit Profile
             </button>
           </div>
 
           <button type="button" class="profile__add-button">
-            <img src="./images/plus-icon.svg" alt="Plus Icon" />New Post
+            <img src="<%= require('./images/plus-icon.svg') %>" alt="Plus Icon" />New Post
           </button>
         </section>
 
@@ -151,7 +150,5 @@
         <p class="modal__caption"></p>
       </div>
       </div>
-   <script src="./scripts/validation.js"></script>
-   <script src="./scripts/index.js"></script>
   </body>
 </html>

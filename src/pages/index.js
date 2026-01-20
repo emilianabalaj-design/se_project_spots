@@ -1,4 +1,5 @@
-
+import "./index.css";
+import { enableValidation } from "../scripts/validate.js"
 
 const initialCards = [
     {
@@ -116,16 +117,6 @@ function getCardElement(data) {
     return cardElement;
 }
 
-
-
-function openModal (modal) {
-
-    modal.classList.add("modal_is-opened");
-}
-
-function closeModal (modal) {
-    modal.classList.remove("modal_is-opened");
-}
 
 function handleEscClose(event) {
     if (event.key === "Escape") {

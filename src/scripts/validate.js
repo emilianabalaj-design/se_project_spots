@@ -46,7 +46,6 @@ const toggleButtonState = (inputList, submitButton, config) => {
 
 
 
-
 const disableSubmitButton = (submitButton, config) => {
     submitButton.disabled = true;
     submitButton.classList.add(config.inactiveButtonClass);
@@ -80,7 +79,7 @@ inputList.forEach((inputEl) => {
 };
 
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
 const formList = (document.querySelectorAll(config.formSelector));
 formList.forEach((formEl) => {
 setEventListeners(formEl, config);
