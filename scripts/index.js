@@ -124,15 +124,23 @@ function handleEscClose(event) {
     }
 }
 
+function handleOverlayClose(event) {
+    if (event.target.classList.contains("modal_is-opened")) {
+        closeModal(event.target);
+    }
+}
+
 function openModal(modal) {
     modal.classList.add("modal_is-opened");
     document.addEventListener("keydown", handleEscClose);
+    modal.addEventListener("click", handleOverlayClose);
 }
 
 
 function closeModal(modal) {
     modal.classList.remove("modal_is-opened");
     document.removeEventListener("keydown", handleEscClose);
+    modal.removeEventListener("click", handleOverlayClose);
 }
 
 editProfileButton.addEventListener("click", function () {
