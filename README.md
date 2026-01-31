@@ -43,3 +43,5 @@ index.html
 
 ## Project Pitch Video
 https://www.loom.com/share/2a235854f6504858b774645260f92490
+
+Final submission for Sprint 8
