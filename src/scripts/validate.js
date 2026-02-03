@@ -2,11 +2,11 @@ const settings = {
     formSelector: ".modal__form",
     inputSelector: ".modal__input",
     submitButtonSelector: ".modal__submit-btn",
-    inactiveButtonClass:".modal__submit-btn_disabled",
+    inactiveButtonClass:"modal__submit-btn_disabled",
     inputErrorClass: "modal__input_type_error"
 };
 
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
 const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
 if (!errorMsgEl) return;
 
@@ -27,9 +27,9 @@ inputEl.classList.remove(config.inputErrorClass);
 const checkInputValidity = (formEl, inputEl, config) => {
     console.log(inputEl.validationMessage);
     if (!inputEl.validity.valid) {
-        showInputError(formEl, inputEl, inputEl.validationMessage);
+        showInputError(formEl, inputEl, inputEl.validationMessage, config);
     } else {
-        hideInputError(formEl, inputEl);
+        hideInputError(formEl, inputEl, config);
     }
 };
 
@@ -60,13 +60,13 @@ const disableSubmitButton = (submitButton, config) => {
 };
 
 const resetValidation = (formEl, inputList, config) => {
+    const submitButton = formEl.querySelector(config.submitButtonSelector);
     inputList.forEach((inputEl) => {
         hideInputError(formEl, inputEl, config);
     });
 
     disableSubmitButton(submitButton, config);
 };
-
 
 
 const setEventListeners = (formEl, config) => {
@@ -79,7 +79,7 @@ toggleButtonState(inputList, submitButton, config);
 
 inputList.forEach((inputEl) => {
   inputEl.addEventListener("input", () => {
-   checkInputValidity(formEl, inputEl);
+   checkInputValidity(formEl, inputEl, config);
     toggleButtonState(inputList, submitButton, config);
     });
   });
@@ -93,8 +93,5 @@ setEventListeners(formEl, config);
 });
 };
 
-export { enableValidation, resetValidation, settings };
-<<<<<<< HEAD:src/scripts/validate.js
 
-=======
->>>>>>> 54f206b (Fix validation paths and restore cards rendering):scripts/validate.js
+export { enableValidation, resetValidation, settings };

@@ -1,33 +1,47 @@
-# Project: Spots
+## SPOTS – INTERACTIVE PHOTO SHARING APP
 
-This project is a responsive web application that allows users to manage a profile and interact with photo cards.  
-In Sprint 7, the focus was on improving **form validation** and **modal user experience** to make the app more reliable and user-friendly.
+## Project Description
+Spots is an interactive web application where users can upload photos, like and delete cards, and edit their profile information and avatar.
+The goal of this project was to connect the frontend to a real backend API so all user actions are saved on the server and persist after page reloads.
 
 ## Features
-- Profile edit form with real-time validation
-- New card form with URL and character length validation
-- Error messages displayed for invalid inputs
-- Submit buttons enabled/disabled based on form validity
-- Forms reset correctly after successful submission
-- Modals can be closed by clicking the overlay
-- Modals can be closed using the Escape (Esc) key
-- Responsive layout for desktop, tablet, and mobile
+• Fetch user profile information from the server
+• Edit user profile and avatar
+• Load initial cards from the API
+• Add new photo cards
+• Like and unlike cards
+• Delete cards with confirmation modal
+• Loading states for better user experience (Saving…, Deleting…)
 
-## Tools & Technologies
-- HTML
-- CSS (Flexbox & Grid)
-- JavaScript (ES6)
-- Browser form validation API
-- Git & GitHub Pages
+## Technologies Used
+• HTML
+• CSS
+• JavaScript (ES6 Modules)
+• Webpack
+• REST API
+• Fetch API
 
-## What I Learned
-- How to implement reusable form validation logic
-- How to manage validation state across multiple forms
-- How to improve UX by handling modal behavior correctly
-- How to use configuration objects to avoid hard-coded values
-- How to safely add and remove event listeners
+## API
+This project uses the TripleTen Spots API.
+Base URL:
+https://around-api.en.tripleten-services.com/v1
+
+## Project Structure
+src/
+components/
+utils/
+Api.js
+pages/
+index.js
+blocks/
+index.html
+
+## Setup & Installation
+	1.	Clone the repository
+	2.	Install dependencies using: npm install
+	3.	Run the project using: npm run dev
 
 ## Project Pitch Video
-Watch the project pitch video here:  
+https://www.loom.com/share/2a235854f6504858b774645260f92490
 
-- (https://www.loom.com/share/daa97ecd1cba4802838520152fac129f)
+Final submission for Sprint 8
